@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Session | Regina Pinto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Jost:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!--  NAV  -->
+    <nav>
+        <a class="logo" href="index.html">Regina<span>Pinto</span></a>
+        <div class="nav-links-wrap" id="navWrap">
+            <div class="nav-links" id="navLinks">
+                <a href="about.html" id="nav-about">About</a>
+                <a href="programs.html" id="nav-programs">Programs</a>
+                <a href="resources.html" id="nav-resources">Resources</a>
+            </div>
+            <a class="btn-nav" href="book.html" id="nav-book">Book Session</a>
+        </div>
+        <div class="nav-toggle" onclick="toggleNav()" id="navToggle">
+            <span></span><span></span><span></span>
+        </div>
+    </nav>
+
+    <!--  MARQUEE  -->
+    <div class="marquee-strip" id="marqueeGlobal">
+        <div class="marquee-track">
+            <span class="marquee-item">Image Management <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Executive Presence <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Personal Branding <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Business Etiquette <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Soft Skills Training <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Colour Analysis <span class="marquee-dot"></span></span>
+            <span class="marquee-item">ICBI Certified <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Corporate Trainer <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Image Management <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Executive Presence <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Personal Branding <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Business Etiquette <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Soft Skills Training <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Colour Analysis <span class="marquee-dot"></span></span>
+            <span class="marquee-item">ICBI Certified <span class="marquee-dot"></span></span>
+            <span class="marquee-item">Corporate Trainer <span class="marquee-dot"></span></span>
+        </div>
+    </div>
+
+        <div class="book-wrap">
+            <div class="section-tag">Book a Session</div>
+            <div class="section-title">Let's Start Your<br><em>Transformation</em></div>
+
+            <div class="book-grid">
+                <div class="book-form-section">
+                    <h3>Tell me about yourself</h3>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" placeholder="Jane">
+                        </div>
+                        <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" placeholder="Smith">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="jane@company.com">
+                    </div>
+                    <div class="form-group">
+                        <label>Profession / Industry</label>
+                        <input type="text" placeholder="e.g. Senior Manager, Finance">
+                    </div>
+                    <div class="form-group">
+                        <label>Choose a Session Type</label>
+                    </div>
+                    <div class="session-selector">
+                        <div class="session-opt selected" onclick="selectSession(this)">
+                            <div class="s-name">Clarity Session</div>
+                            <div class="s-duration">90 min · $295</div>
+                        </div>
+                        <div class="session-opt" onclick="selectSession(this)">
+                            <div class="s-name">Signature Style</div>
+                            <div class="s-duration">6 weeks · $1,800</div>
+                        </div>
+                        <div class="session-opt" onclick="selectSession(this)">
+                            <div class="s-name">Executive Brand</div>
+                            <div class="s-duration">3 months · $4,500</div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>Preferred Date</label>
+                        <input type="date">
+                    </div>
+                    <div class="form-group">
+                        <label>What's Your Biggest Style Challenge?</label>
+                        <textarea
+                            placeholder="e.g. I have no idea what to wear to important meetings. I feel underdressed but also don't want to look like I'm trying too hard..."></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>How did you hear about Regina Studio?</label>
+                        <select>
+                            <option value="">Select an option...</option>
+                            <option>Instagram</option>
+                            <option>LinkedIn</option>
+                            <option>Friend / Colleague</option>
+                            <option>Google Search</option>
+                            <option>Podcast or Interview</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <button class="btn-book" onclick="submitForm()">Request My Consultation →</button>
+                </div>
+
+                <div class="book-sidebar">
+                    <h4>Why work with Regina?</h4>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon">—</div>
+                        <div>
+                            <h5>Personalised Approach</h5>
+                            <p>No templates or cookie-cutter advice. Every session is built entirely around your unique
+                                goals, lifestyle, and personality.</p>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon">—</div>
+                        <div>
+                            <h5>Efficient & Impactful</h5>
+                            <p>I respect your time. Clients see measurable shifts in how they're perceived — often
+                                within the first session.</p>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon">—</div>
+                        <div>
+                            <h5>Ongoing Support</h5>
+                            <p>You're not left alone after a session. All programs include follow-up support to ensure
+                                your transformation sticks.</p>
+                        </div>
+                    </div>
+                    <div class="sidebar-item">
+                        <div class="sidebar-icon">—</div>
+                        <div>
+                            <h5>Completely Confidential</h5>
+                            <p>Your story, challenges, and sessions stay entirely private. Many of my clients are public
+                                figures who value total discretion.</p>
+                        </div>
+                    </div>
+
+                    <div class="testimonials">
+                        <h4>What clients say</h4>
+                        <div class="testimonial">
+                            <p>"Regina's session was practical, engaging, and highly relevant. The team walked away with
+                                insights that immediately improved workplace communication."</p>
+                            <div class="author">— Rakesh Iyer, Marketing Manager, NBFC, Mumbai</div>
+                        </div>
+                        <div class="testimonial">
+                            <p>"The consultation completely changed how I view my wardrobe and personal style. I now
+                                feel more aligned and confident in professional settings."</p>
+                            <div class="author">— Bhakti Poojary, Professional, Hospitality</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--  FOOTER  -->
+    <footer>
+        <div class="footer-logo">Regina<span>Pinto</span></div>
+        <div class="footer-text">Shaping Image. Strengthening Presence.<br>&copy; 2026 Regina Image &amp; Presence Consultancy. All rights reserved.</div>
+        <div class="footer-links">
+            <a href="about.html">About</a>
+            <a href="programs.html">Programs</a>
+            <a href="resources.html">Resources</a>
+            <a href="book.html">Book</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
